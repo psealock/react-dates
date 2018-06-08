@@ -131,6 +131,14 @@ storiesOf('DRP - Calendar Props', module)
       autoFocus
     />
   ))
+  .addWithInfo('vertical with custom month navigation', () => (
+    <DateRangePickerWrapper
+      orientation={VERTICAL_ORIENTATION}
+      navPrev={<TestPrevIcon />}
+      navNext={<TestNextIcon />}
+      autoFocus
+    />
+  ))
   .addWithInfo('with outside days enabled', () => (
     <DateRangePickerWrapper
       numberOfMonths={1}
