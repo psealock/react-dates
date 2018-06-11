@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { forbidExtraProps } from 'airbnb-prop-types';
 import { css, withStyles, withStylesPropTypes } from 'react-with-styles';
@@ -96,6 +96,20 @@ function DayPickerNavigation({
   }
 
   return (
+  <Fragment>
+    {isVerticalScrollable && (
+      <button
+        style={{'position': 'absolute', 'top': '20px', 'width': '100%'}}
+        type="button"
+        aria-label={phrases.jumpToPrevMonth}
+        onClick={onPrevMonthClick}
+        onMouseUp={(e) => {
+          e.currentTarget.blur();
+        }}
+      >
+        {navPrevIcon}
+      </button>
+    )}
     <div
       {...css(
         styles.DayPickerNavigation_container,
@@ -158,6 +172,7 @@ function DayPickerNavigation({
         {navNextIcon}
       </button>
     </div>
+  </Fragment>
   );
 }
 

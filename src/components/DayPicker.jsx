@@ -1121,7 +1121,7 @@ export default withStyles(({ reactDates: { color, font, zIndex } }) => ({
   },
 
   DayPicker_transitionContainer__verticalScrollable: {
-    paddingTop: 20,
+    paddingTop: 80,
     height: '100%',
     position: 'absolute',
     top: 0,
